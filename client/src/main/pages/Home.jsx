@@ -143,7 +143,7 @@ export default function Home() {
         {categories.map((category) => (
           <div
             key={category.id}
-            className="flex flex-col items-center min-w-[80px] cursor-pointer"
+            className="flex flex-col items-center min-w-20 cursor-pointer"
           >
             <div className="h-16 w-16 bg-gray-100 rounded-full flex items-center justify-center mb-2">
               <span className="text-lg">{category.icon}</span>
