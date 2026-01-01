@@ -61,15 +61,15 @@ const Navbar = () => {
   };
   return (
     <>
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl  lg:pb-12">
         <header
-          className={`fixed w-full z-50 transition-all duration-300 ${
+          className={`fixed w-full z-50 transition-all duration-300 border-b border-gray-200 ${
             isScrolled
-              ? "bg-linear-to-r from-gray-50 to-white shadow-lg py-2"
+              ? "bg-linear-to-r from-gray-50 to-white shadow-lg py-2 "
               : "bg-linear-to-r from-white to-gray-50 py-3"
           }`}
         >
-          <div className="container mx-auto px-4">
+          <div className="container max-w-7xl mx-auto px-8 ">
             {/* Top Row - Logo, Search, Icons */}
             <div className="flex items-center justify-between">
               {/* Left Side - Hamburger Menu */}

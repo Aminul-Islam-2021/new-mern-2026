@@ -1,38 +1,38 @@
 import React from "react";
 
 const Hero = () => {
-    // Sample data
-    const categories = [
-        { id: 1, name: "Electronics", icon: "1" },
-        { id: 2, name: "Fashion", icon: "2" },
-        { id: 3, name: "Home & Kitchen", icon: "3" },
-        { id: 4, name: "Beauty", icon: "4" },
-        { id: 5, name: "Sports", icon: "5" },
-        { id: 6, name: "Books", icon: "6" },
-        { id: 7, name: "Toys", icon: "7" },
-        { id: 8, name: "Groceries", icon: "8" },
-        { id: 9, name: "Automotive", icon: "9" },
-        { id: 10, name: "Health", icon: "10" },
-        { id: 11, name: "Garden", icon: "11" },
-        { id: 12, name: "Music", icon: "12" },
-    ];
+  // Sample data
+  const categories = [
+    { id: 1, name: "Electronics", icon: "1" },
+    { id: 2, name: "Fashion", icon: "2" },
+    { id: 3, name: "Home & Kitchen", icon: "3" },
+    { id: 4, name: "Beauty", icon: "4" },
+    { id: 5, name: "Sports", icon: "5" },
+    { id: 6, name: "Books", icon: "6" },
+    { id: 7, name: "Toys", icon: "7" },
+    { id: 8, name: "Groceries", icon: "8" },
+    { id: 9, name: "Automotive", icon: "9" },
+    { id: 10, name: "Health", icon: "10" },
+    { id: 11, name: "Garden", icon: "11" },
+    { id: 12, name: "Music", icon: "12" },
+  ];
 
-    const promotionalCards = [
-        {
-            id: 1,
-            title: "Summer Sale",
-            discount: "50% OFF",
-            description: "On selected items",
-            bgColor: "bg-gradient-to-br from-orange-500 to-red-500",
-        },
-        {
-            id: 2,
-            title: "Free Shipping",
-            discount: "$49+",
-            description: "Limited time offer",
-            bgColor: "bg-gradient-to-br from-blue-600 to-cyan-500",
-        },
-    ];
+  const promotionalCards = [
+    {
+      id: 1,
+      title: "Summer Sale",
+      discount: "50% OFF",
+      description: "On selected items",
+      bgColor: "bg-gradient-to-br from-orange-500 to-red-500",
+    },
+    {
+      id: 2,
+      title: "Free Shipping",
+      discount: "$49+",
+      description: "Limited time offer",
+      bgColor: "bg-gradient-to-br from-blue-600 to-cyan-500",
+    },
+  ];
   return (
     <>
       <div className=" max-w-7xl mx-auto px-4 ">

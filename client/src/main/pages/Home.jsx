@@ -12,6 +12,35 @@ import { CgProfile } from "react-icons/cg";
 import { Link } from "react-router-dom";
 import Navbar from "../layout/Navbar";
 import Hero from "../components/Hero";
+import PromoCard from "../components/PromoCard";
+import ProductCard1 from "../components/ProductCard1";
+
+
+
+
+function Section({ promo }) {
+  return (
+    <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-4">
+      <PromoCard promo={promo} />
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        {Array.from({ length: 8 }).map((_, i) => (
+          <ProductCard1 key={i} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+
+
+
+
+
+
+
+
+
 
 export default function Home() {
   const [categoriesOpen, setCategoriesOpen] = useState(true);
@@ -107,17 +136,53 @@ export default function Home() {
       <Hero />
 
       {/* ================= Category Logo================= */}
-     
+
       {/* ================= Brand ================= */}
-      <section className="bg-gray-100 py-4">
-        <div className="max-w-7xl mx-auto px-4 flex justify-between text-gray-400">
-          <span>graphicriver</span>
-          <span>audiojungle</span>
-          <span>codecanyon</span>
-          <span>themeforest</span>
-          <span>activeden</span>
-        </div>
+   
+      <section className="max-w-7xl mx-auto px-4 py-10 flex justify-between items-center overflow-x-auto space-x-6">
+        {categories.map((category) => (
+          <div
+            key={category.id}
+            className="flex flex-col items-center min-w-[80px] cursor-pointer"
+          >
+            <div className="h-16 w-16 bg-gray-100 rounded-full flex items-center justify-center mb-2">
+              <span className="text-lg">{category.icon}</span>
+            </div>
+            <span className="text-xs">{category.name}</span>
+          </div>
+        ))}
       </section>
+    
+
+      {/* ================= Promo Section ================= */}
+      <div className="space-y-10">
+        <Section
+          title="Deals and offers"
+          promo={{
+            title: "Deals and offers",
+            subtitle: "Hygiene equipments",
+            timer: ["04", "13", "34", "56"],
+          }}
+        />
+
+        <Section
+          title="Home and outdoor products"
+          promo={{
+            title: "Home and outdoor products",
+            button: "Explore now",
+            image: "/promo-home.jpg",
+          }}
+        />
+
+        <Section
+          title="Consumer electronics and gadgets"
+          promo={{
+            title: "Consumer electronics and gadgets",
+            button: "Explore now",
+            image: "/promo-electronics.jpg",
+          }}
+        />
+      </div>
 
       {/* ================= TABS ================= */}
       <div className="max-w-7xl mx-auto px-4 pt-10">
