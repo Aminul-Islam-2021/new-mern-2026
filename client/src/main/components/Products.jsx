@@ -104,12 +104,12 @@ const Products = () => {
         <div className="flex gap-6">
           {/* Sidebar Filters */}
           <div className={`
-            fixed lg:static inset-0 z-50 lg:z-0
+            fixed lg:static inset-0 z-40 lg:z-0
             ${showFilters ? 'block' : 'hidden lg:block'}
-            lg:w-80 lg:shrink-0
+            lg:w-62 lg:shrink-0
           `}>
             <div className="h-full lg:h-auto bg-black bg-opacity-50 lg:bg-transparent">
-              <div className="w-80 h-full bg-white lg:rounded-lg p-6 overflow-y-auto">
+              <div className="w-64 h-full bg-white lg:rounded-lg p-6 overflow-y-auto">
                 <div className="flex items-center justify-between mb-6">
                   <h2 className="text-xl font-bold">Filter</h2>
                   <div className="flex items-center gap-2">
@@ -309,8 +309,8 @@ const Products = () => {
 
             {/* Products */}
             <div className={`grid gap-6 ${viewMode === 'grid'
-                ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
-                : 'grid-cols-1'
+                ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'
+                : 'grid-cols-2'
               }`}>
               {products.map((product, index) => (
                 <div
