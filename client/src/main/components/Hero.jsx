@@ -1,4 +1,5 @@
 import React from "react";
+import HeroBanner from "./banner/HeroBanner";
 
 const Hero = () => {
   // Sample data
@@ -73,22 +74,9 @@ const Hero = () => {
 
           {/* Middle - Main Banner */}
           <div className="lg:w-4/6 h-full hidden lg:block">
-            <div className="bg-linear-to-r from-blue-600 to-purple-700 rounded shadow h-full flex items-center p-6 md:p-8">
-              <div className="max-w-lg">
-                <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded text-white text-sm font-semibold mb-4">
-                  Limited Time Offer
-                </span>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                  Big Summer Sale 2024
-                </h2>
-                <p className="text-white/90 text-lg mb-6">
-                  Up to 60% off on all items. Don't miss out on amazing deals!
-                </p>
-                <button className="px-6 py-3 bg-white text-blue-600 font-bold  hover:bg-gray-100 transition-colors">
-                  Shop Now
-                </button>
-              </div>
-            </div>
+           
+              <HeroBanner />
+           
           </div>
 
           {/* Right Side - Promotional Cards */}
@@ -113,17 +101,7 @@ const Hero = () => {
         {/* Mobile Layout */}
         <div className="lg:hidden space-y-4 mt-16">
           <div className="h-64">
-            <div className="bg-linear-to-r from-blue-600 to-purple-700 rounded shadow h-full flex items-center p-6">
-              <div>
-                <h2 className="text-2xl font-bold text-white mb-3">
-                  Big Summer Sale
-                </h2>
-                <p className="text-white/90 mb-4">Up to 60% off on all items</p>
-                <button className="px-5 py-2 bg-white text-blue-600 font-bold rounded-lg">
-                  Shop Now
-                </button>
-              </div>
-            </div>
+            <HeroBanner />
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-orange-500 rounded shadow p-4">
